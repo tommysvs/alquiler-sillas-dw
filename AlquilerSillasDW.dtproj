@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">TOMMY-MSI</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7y4CsB5VD0WknDdtvBip6AAAAAACAAAAAAAQZgAAAAEAACAAAACE8gUG5KY0JuLPICCQ0EwN4rQ2qDQuNWtGnKwWdYs7pgAAAAAOgAAAAAIAACAAAABoBEaI6hvge18spIGa8e6zWYXimWjwKxzQ/uSYGnu/8JAAAAAuUokmB7MP/GWHYybzcy7+Bnu2Mx0Ol9o/uy7/qZ6KJgLsGjNxel4x1qLXa5zTEHaUoKpMn9pfJqmm6gCo8ACUYtlOd2BIrlCPaqXsI7oOePQNZpGq1VcntU6y1SRQvTH8WKGPL32BDDTSJcm8ZSsEyf7IGO1jHPznyX9VwXFg93h9RAfr1Rq1Bh15BjQjDzRAAAAAqgE4YTevFRucWzwrr8FEiqfa9AF97jPOiQM8g7UIzOo56uP6Q0SIOb3zuRNiT/QRI3oplCuIM6hZDdMT1+O69w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7y4CsB5VD0WknDdtvBip6AAAAAACAAAAAAAQZgAAAAEAACAAAACNHsmNGCQWHcxIXnR6cvmk8S/9F4EzosqUVchH8WQi2QAAAAAOgAAAAAIAACAAAABQhYxs7Vyck/l4p1ixoatzHHPy5hCP8/ImDIlanaiI6JAAAAA/s7VAmu/3EIawrlpoZCK/IzhwgSC5ZcGunmnWEIVbAaBYBqhnkMSfXq9MIBMNDD/0DXSegpMkoY+0u/XD8l1+C6ROZleENM6jSqYy9lmK+zDGypYxa6KMhQS2kFv1Pe98x5M1hwmTkHfbMF46fw6/lDqy1wGgjfJ3pssHL3IbpwMgBPjEl9y3GA0l4JOG/z1AAAAAUnFPVq4mlpSpkiH876578SYuHhF5zs9AJvVEGjfQ0Q/Er8tjECn/K/CAa+TnZzhlew6f8sQBDu0GT7/R+Ksl1g==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -59,7 +59,12 @@
     </Manifest>
   </DeploymentModelSpecificContent>
   <ControlFlowParts />
-  <Miscellaneous />
+  <Miscellaneous>
+    <ProjectItem>
+      <Name>AlquilerSillas.sql</Name>
+      <FullPath>AlquilerSillas.sql</FullPath>
+    </ProjectItem>
+  </Miscellaneous>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
