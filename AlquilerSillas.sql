@@ -5,24 +5,24 @@ USE AlquilerSillas;
 GO
 
 CREATE TABLE Sucursal (
-    id_sucursal INT PRIMARY KEY IDENTITY,
+    id_sucursal INT IDENTITY(1,1) PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL,
     direccion NVARCHAR(200) NOT NULL
 );
 
 CREATE TABLE Puesto (
-    id_puesto INT PRIMARY KEY IDENTITY,
+    id_puesto INT IDENTITY(1,1) PRIMARY KEY,
     nombre NVARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Jornada (
-    id_jornada INT PRIMARY KEY IDENTITY,
+    id_jornada INT IDENTITY(1,1) PRIMARY KEY,
     hora_inicio TIME NOT NULL,
     hora_fin TIME NOT NULL
 );
 
 CREATE TABLE Empleado (
-    id_empleado INT PRIMARY KEY IDENTITY,
+    id_empleado INT IDENTITY(1,1) PRIMARY KEY,
     nombre_completo NVARCHAR(150) NOT NULL,
     correo NVARCHAR(100) NOT NULL,
     direccion NVARCHAR(200) NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE Empleado (
 );
 
 CREATE TABLE Planilla (
-    id_planilla INT PRIMARY KEY IDENTITY,
+    id_planilla INT IDENTITY(1,1) PRIMARY KEY,
     id_empleado INT NOT NULL,
     fecha_pago DATE NOT NULL,
     salario_base DECIMAL(10,2) NOT NULL,
@@ -48,14 +48,14 @@ CREATE TABLE Planilla (
 );
 
 CREATE TABLE Proveedor (
-    id_proveedor INT PRIMARY KEY IDENTITY,
+    id_proveedor INT IDENTITY(1,1) PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL,
     contacto NVARCHAR(100),
     direccion NVARCHAR(200)
 );
 
 CREATE TABLE Producto (
-    id_producto INT PRIMARY KEY IDENTITY,
+    id_producto INT IDENTITY(1,1) PRIMARY KEY,
     descripcion NVARCHAR(100) NOT NULL,
     precio_alquiler DECIMAL(10,2) NOT NULL,
     fecha_vencimiento DATE,
@@ -65,7 +65,7 @@ CREATE TABLE Producto (
 );
 
 CREATE TABLE Inventario (
-    id_inventario INT PRIMARY KEY IDENTITY,
+    id_inventario INT IDENTITY(1,1) PRIMARY KEY,
     id_producto INT NOT NULL,
     fecha_ingreso DATE NOT NULL,
     cantidad INT NOT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE Inventario (
 );
 
 CREATE TABLE Cliente (
-    id_cliente INT PRIMARY KEY IDENTITY,
+    id_cliente INT IDENTITY(1,1) PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL,
     direccion NVARCHAR(200),
     correo NVARCHAR(100),
@@ -82,7 +82,7 @@ CREATE TABLE Cliente (
 );
 
 CREATE TABLE Venta (
-    id_venta INT PRIMARY KEY IDENTITY,
+    id_venta INT IDENTITY(1,1) PRIMARY KEY,
     fecha DATE NOT NULL,
     id_cliente INT NOT NULL,
     id_sucursal INT NOT NULL,
@@ -94,7 +94,7 @@ CREATE TABLE Venta (
 );
 
 CREATE TABLE VentaDetalle (
-    id_detalle INT PRIMARY KEY IDENTITY,
+    id_detalle INT IDENTITY(1,1) PRIMARY KEY,
     id_venta INT NOT NULL,
     id_producto INT NOT NULL,
     cantidad INT NOT NULL,
@@ -105,7 +105,7 @@ CREATE TABLE VentaDetalle (
 );
 
 CREATE TABLE DefectoProductoCliente (
-    id_defecto_cliente INT PRIMARY KEY IDENTITY,
+    id_defecto_cliente INT IDENTITY(1,1) PRIMARY KEY,
     id_venta INT NOT NULL,
     id_producto INT NOT NULL,
     monto_cobrado DECIMAL(10,2) NOT NULL,
@@ -114,7 +114,7 @@ CREATE TABLE DefectoProductoCliente (
 );
 
 CREATE TABLE DefectoProductoInventario (
-    id_defecto INT PRIMARY KEY IDENTITY,
+    id_defecto INT IDENTITY(1,1) PRIMARY KEY,
     id_producto INT NOT NULL,
     fecha DATE NOT NULL,
     descripcion NVARCHAR(200),
@@ -123,13 +123,13 @@ CREATE TABLE DefectoProductoInventario (
 );
 
 CREATE TABLE Rol (
-    id_rol INT PRIMARY KEY IDENTITY,
+    id_rol INT IDENTITY(1,1) PRIMARY KEY,
     nombre_rol NVARCHAR(50) NOT NULL,
     descripcion NVARCHAR(100)
 );
 
 CREATE TABLE Usuario (
-    id_usuario INT PRIMARY KEY IDENTITY,
+    id_usuario INT IDENTITY(1,1) PRIMARY KEY,
     usuario NVARCHAR(50) NOT NULL,
     clave NVARCHAR(100) NOT NULL,
     id_rol INT NOT NULL,
@@ -139,7 +139,7 @@ CREATE TABLE Usuario (
 );
 
 CREATE TABLE Modulo (
-    id_modulo INT PRIMARY KEY IDENTITY,
+    id_modulo INT IDENTITY(1,1) PRIMARY KEY,
     nombre NVARCHAR(50) NOT NULL,
     descripcion NVARCHAR(100)
 );

@@ -25,8 +25,6 @@ GO
 TRUNCATE TABLE [dbo].[DW_Roles]
 GO
 TRUNCATE TABLE [dbo].[DW_Sucursales]
-GO
-TRUNCATE TABLE [dbo].[HechosAlquilerSillas]
 
 --Crear
 CREATE TABLE [dbo].[HechosAlquilerSillas] (
