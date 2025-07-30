@@ -42,3 +42,21 @@ CREATE TABLE HechosAlquilerSillas (
     id_rol INT NOT NULL,
     id_sucursal INT NOT NULL
 );
+
+--LLenar DW_Fecha
+DECLARE @fecha DATE = '2024-01-01';
+
+WHILE @fecha <= '2025-12-31'
+BEGIN
+    INSERT INTO DW_Fecha (id_fecha, fecha, dia, mes, anio, NombreDia, NombreMes)
+    VALUES (
+        CONVERT(INT, FORMAT(@fecha,'yyyyMMdd')),
+        @fecha,
+        DAY(@fecha),
+        MONTH(@fecha),
+        YEAR(@fecha),
+        DATENAME(WEEKDAY, @fecha),
+        DATENAME(MONTH, @fecha)
+    );
+    SET @fecha = DATEADD(DAY, 1, @fecha);
+END
