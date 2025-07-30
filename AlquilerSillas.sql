@@ -1,4 +1,8 @@
 CREATE DATABASE AlquilerSillas;
+GO
+
+USE AlquilerSillas;
+GO
 
 CREATE TABLE Sucursal (
     id_sucursal INT PRIMARY KEY IDENTITY,
