@@ -29,13 +29,18 @@ CREATE TABLE DW_Empleados (
 
 CREATE TABLE DW_EstadoProducto (
     id_estadoProducto INT PRIMARY KEY NOT NULL,
+    NombreEstado NVARCHAR(50) NOT NULL,
     DescripcionEstado NVARCHAR(200) NULL
 );
 
 CREATE TABLE DW_Fecha (
     id_fecha INT PRIMARY KEY NOT NULL,
+    Fecha DATE,
+    Dia INT NOT NULL,
     Mes INT NOT NULL,
-    Anio INT NOT NULL
+    Anio INT NOT NULL,
+    NombreDia NVARCHAR(20) NOT NULL,
+    NombreMes NVARCHAR(20) NOT NULL,
 );
 
 CREATE TABLE DW_Jornadas (
@@ -51,7 +56,7 @@ CREATE TABLE DW_Modulos (
 );
 
 CREATE TABLE DW_Pagos (
-    id_pago INT PRIMARY KEY NOT NULL,
+    id_pago INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
     TipoPago NVARCHAR(20) NOT NULL,
     MontoTotal DECIMAL(10, 2) NOT NULL,
     Estado NVARCHAR(20) NULL
@@ -85,7 +90,7 @@ CREATE TABLE DW_Sucursales (
 );
 
 CREATE TABLE HechosAlquilerSillas (
-    Codigo INT PRIMARY KEY NOT NULL,
+    Codigo INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
     id_categoria INT NOT NULL,
     id_cliente INT NOT NULL,
     id_empleado INT NOT NULL,
@@ -97,5 +102,17 @@ CREATE TABLE HechosAlquilerSillas (
     id_producto INT NOT NULL,
     id_proveedor INT NOT NULL,
     id_rol INT NOT NULL,
-    id_sucursal INT NOT NULL
+    id_sucursal INT NOT NULL,
+    CONSTRAINT FK_HechosAlquilerSillas_Categoria FOREIGN KEY (id_categoria) REFERENCES DW_Categoria(id_categoria),
+    CONSTRAINT FK_HechosAlquilerSillas_Cliente FOREIGN KEY (id_cliente) REFERENCES DW_Clientes(id_cliente),
+    CONSTRAINT FK_HechosAlquilerSillas_Empleado FOREIGN KEY (id_empleado) REFERENCES DW_Empleados(id_empleado),
+    CONSTRAINT FK_HechosAlquilerSillas_EstadoProducto FOREIGN KEY (id_estadoProducto) REFERENCES DW_EstadoProducto(id_estadoProducto),
+    CONSTRAINT FK_HechosAlquilerSillas_Fecha FOREIGN KEY (id_fecha) REFERENCES DW_Fecha(id_fecha),
+    CONSTRAINT FK_HechosAlquilerSillas_Jornada FOREIGN KEY (id_jornada) REFERENCES DW_Jornadas(id_jornada),
+    CONSTRAINT FK_HechosAlquilerSillas_Modulo FOREIGN KEY (id_modulo) REFERENCES DW_Modulos(id_modulo),
+    CONSTRAINT FK_HechosAlquilerSillas_Pago FOREIGN KEY (id_pago) REFERENCES DW_Pagos(id_pago),
+    CONSTRAINT FK_HechosAlquilerSillas_Producto FOREIGN KEY (id_producto) REFERENCES DW_Productos(id_producto),
+    CONSTRAINT FK_HechosAlquilerSillas_Proveedor FOREIGN KEY (id_proveedor) REFERENCES DW_Proveedores(id_proveedor),
+    CONSTRAINT FK_HechosAlquilerSillas_Rol FOREIGN KEY (id_rol) REFERENCES DW_Roles(id_rol),
+    CONSTRAINT FK_HechosAlquilerSillas_Sucursal FOREIGN KEY (id_sucursal) REFERENCES DW_Sucursales(id_sucursal)
 );

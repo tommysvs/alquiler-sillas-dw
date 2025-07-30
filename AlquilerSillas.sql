@@ -47,11 +47,23 @@ CREATE TABLE Planilla (
     FOREIGN KEY (id_empleado) REFERENCES Empleado(id_empleado)
 );
 
+CREATE TABLE Categoria (
+    id_categoria INT IDENTITY(1,1) PRIMARY KEY,
+    nombre NVARCHAR(100) NOT NULL,
+    descripcion NVARCHAR(200)
+);
+
 CREATE TABLE Proveedor (
     id_proveedor INT IDENTITY(1,1) PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL,
     contacto NVARCHAR(100),
     direccion NVARCHAR(200)
+);
+
+CREATE TABLE EstadoProducto (
+    id_estado_producto INT IDENTITY(1,1) PRIMARY KEY,
+    nombre NVARCHAR(50) NOT NULL,
+    descripcion NVARCHAR(200)
 );
 
 CREATE TABLE Producto (
@@ -60,8 +72,12 @@ CREATE TABLE Producto (
     precio_alquiler DECIMAL(10,2) NOT NULL,
     fecha_vencimiento DATE,
     existencia INT NOT NULL,
+    id_categoria INT,
     id_proveedor INT,
-    FOREIGN KEY (id_proveedor) REFERENCES Proveedor(id_proveedor)
+    id_estado_producto INT,
+    FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria),
+    FOREIGN KEY (id_proveedor) REFERENCES Proveedor(id_proveedor),
+    FOREIGN KEY (id_estado_producto) REFERENCES EstadoProducto(id_estado_producto)
 );
 
 CREATE TABLE Inventario (

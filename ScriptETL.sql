@@ -27,17 +27,18 @@ GO
 TRUNCATE TABLE [dbo].[DW_Sucursales]
 
 --Crear
-CREATE TABLE [dbo].[HechosAlquilerSillas] (
-	[Codigo] [int] PRIMARY KEY NOT NULL,
-	[id_categoria] [int] NOT NULL,
-	[id_empleado] [int] NOT NULL,
-	[id_estadoProducto] [int] NOT NULL,
-	[id_fecha] [int] NOT NULL,
-	[id_jornada] [int] NOT NULL,
-	[id_modulo] [int] NOT NULL,
-	[id_pago] [int] NOT NULL,
-	[id_producto] [int] NOT NULL,
-	[id_proveedor] [int] NOT NULL,
-	[id_rol] [int] NOT NULL,
-	[id_surcursal] [int] NOT NULL
-)
+CREATE TABLE HechosAlquilerSillas (
+    Codigo INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    id_categoria INT NOT NULL,
+    id_cliente INT NOT NULL,
+    id_empleado INT NOT NULL,
+    id_estadoProducto INT NOT NULL,
+    id_fecha INT NOT NULL,
+    id_jornada INT NOT NULL,
+    id_modulo INT NOT NULL,
+    id_pago INT NOT NULL,
+    id_producto INT NOT NULL,
+    id_proveedor INT NOT NULL,
+    id_rol INT NOT NULL,
+    id_sucursal INT NOT NULL
+);

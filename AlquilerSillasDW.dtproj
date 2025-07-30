@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">TOMMY-MSI</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALRS8HCaYiE+CmxrumWfG0QAAAAACAAAAAAAQZgAAAAEAACAAAAALfMlz+eFVFmy8orOJnaajZc0McCJpwKkhorMQnVg1dwAAAAAOgAAAAAIAACAAAADYVa7yqLcRTxYxb9rjjQwGQ27mE/UBhQPkVSNs3juftJAAAAAZYUFy/eC8n5A56GZz3VzDJbPi2mVQWlbAOVzyi9aoCAoPk6rjeSoJB1dwny/bVpzJTw+AX1tLN2Qp4jdvgThORcZcNQuJAAd5Abr4nb1Vxodb+wJisVHnlNG/LFG5iZ/zVVQoH6u5cCCZRv+S+os3VfgAVAbNgsY+09kY0GTzv8f/V5gqMS5lSNf5CqHgTo5AAAAAmOhEH9eApyuFDrle7UcwuLTT89QRVnokVYIH3/2/oiS7PDu2kTMiyuFVdzHuIJRpjdR6EpWkwGanCDZiwI9rJw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7y4CsB5VD0WknDdtvBip6AAAAAACAAAAAAAQZgAAAAEAACAAAAAwvN6GceM3peayEBOLjvEvu4CVmKVTbf8ldrYPUgEUOQAAAAAOgAAAAAIAACAAAAB/CC8zRpKAz23Adn4ro3KXd9V5eFMUYfZ0h0nAoVCcwpAAAABfz9+HieBZb4C2QoF4IqWOCnHyY17WTo3J60dC7XyLZ33FowIdRtKa+Hdxo5rv9uIe2R6QTRbk3gYNo52is5KJ2XznhixtanLCN6Lag0/wDeySffli+t2rs40vtto4cGve7MVwQFVG4NfKZxUKXUm7H4bqEEG45xqI1xoCUCDDuYh2DjS4Gks2k7Xkcd/6iqVAAAAA3lel6VrZ5K0Fhjw84j+tT0R6oEfbS3UZHYhemcKNv5EZ1uvc2qBk99gSmwsvP5IvY2r3QkULkowdh+Z6yN6VLA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,17 +42,17 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">5</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">64</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{83EA806C-D629-4A4A-904C-9ECF7DA09CA6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A3864110-81ED-40F9-8CBC-B8E7CA1A5E42}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.AlquilerSillas.ConnectByProxy">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.AlquilerSillas.ConnectByProxy">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -67,7 +67,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.AlquilerSillas.ConnectionString">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.AlquilerSillas.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -78,11 +78,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=MEI\SQLEXPRESS;Initial Catalog=AlquilerSillas;Integrated Security=True;Encrypt=False;Application Name=SSIS-Package-{89335171-3A4D-4538-B43D-F25420FC5CF9}MEI\SQLEXPRESS.AlquilerSillas;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=TOMMY-MSI\SQLEXPRESS;Initial Catalog=AlquilerSillas;Integrated Security=True;Encrypt=False;Application Name=SSIS-Package-{89335171-3A4D-4538-B43D-F25420FC5CF9}MEI\SQLEXPRESS.AlquilerSillas;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.AlquilerSillas.ConnectUsingManagedIdentity">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.AlquilerSillas.ConnectUsingManagedIdentity">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -97,7 +97,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.AlquilerSillas.InitialCatalog">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.AlquilerSillas.InitialCatalog">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -112,7 +112,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.AlquilerSillas.Password">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.AlquilerSillas.Password">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -126,7 +126,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.AlquilerSillas.RetainSameConnection">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.AlquilerSillas.RetainSameConnection">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -141,7 +141,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.AlquilerSillas.ServerName">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.AlquilerSillas.ServerName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -152,11 +152,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">MEI\SQLEXPRESS</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">TOMMY-MSI\SQLEXPRESS</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.AlquilerSillas.UserName">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.AlquilerSillas.UserName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -170,7 +170,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.DW_AlquilerSillas.ConnectByProxy">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.DW_AlquilerSillas.ConnectByProxy">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -185,7 +185,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.DW_AlquilerSillas.ConnectionString">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.DW_AlquilerSillas.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -196,11 +196,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=MEI\SQLEXPRESS;Initial Catalog=DW_AlquilerSillas;Integrated Security=True;Encrypt=False;Application Name=SSIS-Package-{5B808AD5-ED64-4FC4-AD8C-D777500E540D}MEI\SQLEXPRESS.DW_AlquilerSillas;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=TOMMY-MSI\SQLEXPRESS;Initial Catalog=DW_AlquilerSillas;Integrated Security=True;Encrypt=False;Application Name=SSIS-Package-{5B808AD5-ED64-4FC4-AD8C-D777500E540D}MEI\SQLEXPRESS.DW_AlquilerSillas;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.DW_AlquilerSillas.ConnectUsingManagedIdentity">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.DW_AlquilerSillas.ConnectUsingManagedIdentity">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -215,7 +215,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.DW_AlquilerSillas.InitialCatalog">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.DW_AlquilerSillas.InitialCatalog">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -230,7 +230,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.DW_AlquilerSillas.Password">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.DW_AlquilerSillas.Password">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -244,7 +244,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.DW_AlquilerSillas.RetainSameConnection">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.DW_AlquilerSillas.RetainSameConnection">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -259,7 +259,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.DW_AlquilerSillas.ServerName">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.DW_AlquilerSillas.ServerName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -270,11 +270,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">MEI\SQLEXPRESS</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">TOMMY-MSI\SQLEXPRESS</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MEI\SQLEXPRESS.DW_AlquilerSillas.UserName">
+                <SSIS:Parameter SSIS:Name="CM.SERVER.DW_AlquilerSillas.UserName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -301,6 +301,18 @@
       <Name>AlquilerSillas.sql</Name>
       <FullPath>AlquilerSillas.sql</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>AlquilerSillas_INSERTS.sql</Name>
+      <FullPath>AlquilerSillas_INSERTS.sql</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DW_AlquilerSillas.sql</Name>
+      <FullPath>DW_AlquilerSillas.sql</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ScriptETL.sql</Name>
+      <FullPath>ScriptETL.sql</FullPath>
+    </ProjectItem>
   </Miscellaneous>
   <Configurations>
     <Configuration>
@@ -318,7 +330,13 @@
         <LinkedAzureSSISIR />
         <LinkedAzureStorage />
         <RemoteExecutionFolder />
-        <ParameterConfigurationValues />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2025-07-30T04:39:19.7922712Z</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
       </Options>
     </Configuration>
   </Configurations>
