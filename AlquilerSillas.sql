@@ -21,6 +21,12 @@ CREATE TABLE Jornada (
     hora_fin TIME NOT NULL
 );
 
+CREATE TABLE Rol (
+    id_rol INT IDENTITY(1,1) PRIMARY KEY,
+    nombre_rol NVARCHAR(50) NOT NULL,
+    descripcion NVARCHAR(100)
+);
+
 CREATE TABLE Empleado (
     id_empleado INT IDENTITY(1,1) PRIMARY KEY,
     nombre_completo NVARCHAR(150) NOT NULL,
@@ -30,9 +36,11 @@ CREATE TABLE Empleado (
     id_puesto INT NOT NULL,
     id_sucursal INT NOT NULL,
     id_jornada INT NOT NULL,
+    id_rol INT NULL,
     FOREIGN KEY (id_puesto) REFERENCES Puesto(id_puesto),
     FOREIGN KEY (id_sucursal) REFERENCES Sucursal(id_sucursal),
-    FOREIGN KEY (id_jornada) REFERENCES Jornada(id_jornada)
+    FOREIGN KEY (id_jornada) REFERENCES Jornada(id_jornada),
+    FOREIGN KEY (id_rol) REFERENCES Rol(id_rol)
 );
 
 CREATE TABLE Planilla (
@@ -105,8 +113,10 @@ CREATE TABLE Venta (
     tipo_pago NVARCHAR(20) NOT NULL,
     monto_total DECIMAL(10,2) NOT NULL,
     estado NVARCHAR(20),
+    id_empleado INT NULL,
     FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente),
-    FOREIGN KEY (id_sucursal) REFERENCES Sucursal(id_sucursal)
+    FOREIGN KEY (id_sucursal) REFERENCES Sucursal(id_sucursal),
+    FOREIGN KEY (id_empleado) REFERENCES Empleado(id_empleado) -- FK nueva
 );
 
 CREATE TABLE VentaDetalle (
@@ -136,12 +146,6 @@ CREATE TABLE DefectoProductoInventario (
     descripcion NVARCHAR(200),
     monto_perdida DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (id_producto) REFERENCES Producto(id_producto)
-);
-
-CREATE TABLE Rol (
-    id_rol INT IDENTITY(1,1) PRIMARY KEY,
-    nombre_rol NVARCHAR(50) NOT NULL,
-    descripcion NVARCHAR(100)
 );
 
 CREATE TABLE Usuario (
