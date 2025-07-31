@@ -30,7 +30,7 @@ Este modelo consta de **12 dimensiones** y una tabla de hechos principal.
 9. **DIM_MODULO** – Módulos funcionales del sistema y sus descripciones.
 10. **DIM_CATEGORIA_PRODUCTO** – Clasificación de productos por categorías.
 11. **DIM_ESTADO_PRODUCTO** – Estado actual de los productos (nuevo, usado, defectuoso, etc.)
-12. **DIM_UBICACION** – Ubicación física de productos, clientes o eventos.
+12. **DIM_SUCURSAL** – Información básica sobre cada sucursal: nombre, dirección y ciudad.
 
 ### Tabla de Hechos
 
@@ -49,7 +49,7 @@ Registra las transacciones y métricas cuantitativas del negocio.
   - id_modulo  
   - id_categoria_producto  
   - id_estado_producto  
-  - id_ubicacion
+  - id_sucursal
 
 - **Medidas:**  
   - cantidad_alquilada  
